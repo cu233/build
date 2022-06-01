@@ -4,6 +4,11 @@ jobs:
   Explore:
     runs-on: ubuntu-latest
     steps:
+      - name: add zsh
+        run: |
+          sudo apt update
+          sudo apt install -y zsh
+
       - name: hello
-        shell: sh
-        run: echo hello world $SHELL
+        shell: zsh
+        run: echo hello world $0
